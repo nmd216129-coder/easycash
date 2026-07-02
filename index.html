@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EasyCash</title>
 
+<style>
+body{
+background:#111827;
+color:white;
+font-family:Arial,sans-serif;
+margin:0;
+padding:20px;
+}
+
+.card{
+background:#1f2937;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#16a34a;
+color:white;
+font-size:18px;
+margin-top:10px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:10px;
+border:none;
+}
+
+h1{
+text-align:center;
+color:#22c55e;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>EasyCash</h1>
+
+<div class="card">
+<h2>Balance</h2>
+<h1 id="balance">0 BDT</h1>
+</div>
+
+<div class="card">
+<h2>Daily Task</h2>
+<p>Complete today's task and earn 10 BDT.</p>
+<button onclick="task()">Complete Task</button>
+</div>
+
+<div class="card">
+<h2>Referral</h2>
+<p>Your Referral Link:</p>
+
+<input id="ref" readonly value="https://t.me/EasyCash2026_bot?start=12345">
+
+<button onclick="copy()">Copy Link</button>
+
+</div>
+
+<div class="card">
+
+<h2>Withdraw</h2>
+
+<input placeholder="Bkash Number">
+
+<input placeholder="Amount">
+
+<button onclick="withdraw()">Withdraw</button>
+
+</div>
+
+<script>
+
+let money=0;
+
+function task(){
+
+money+=10;
+
+document.getElementById("balance").innerHTML=money+" BDT";
+
+alert("Task Completed +10 BDT");
+
+}
+
+function copy(){
+
+let copyText=document.getElementById("ref");
+
+copyText.select();
+
+document.execCommand("copy");
+
+alert("Referral Link Copied");
+
+}
+
+function withdraw(){
+
+if(money<100){
+
+alert("Minimum Withdraw 100 BDT");
+
+}else{
+
+alert("Withdraw Request Sent");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
