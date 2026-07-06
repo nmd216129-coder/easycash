@@ -5,128 +5,99 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EasyCash</title>
 
-<style>
-body{
-background:#111827;
-color:white;
-font-family:Arial,sans-serif;
-margin:0;
-padding:20px;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.card{
-background:#1f2937;
-padding:20px;
-border-radius:15px;
-margin-bottom:20px;
-}
-
-button{
-width:100%;
-padding:15px;
-border:none;
-border-radius:10px;
-background:#16a34a;
-color:white;
-font-size:18px;
-margin-top:10px;
-}
-
-input{
-width:100%;
-padding:12px;
-margin-top:10px;
-border-radius:10px;
-border:none;
-}
-
-h1{
-text-align:center;
-color:#22c55e;
-}
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>EasyCash</h1>
+<div class="container">
 
-<div class="card">
-<h2>Balance</h2>
-<h1 id="balance">0 BDT</h1>
+<header class="header">
+<div class="logo">
+<h2>💸 EasyCash</h2>
 </div>
 
-<div class="card">
-<h2>Daily Task</h2>
-<p>Complete today's task and earn 10 BDT.</p>
-<button onclick="task()">Complete Task</button>
+<div class="profile">
+<img src="https://i.imgur.com/Z6X9Z6X.png" class="avatar">
+</div>
+</header>
+
+<section class="balance-card">
+
+<h3>Available Balance</h3>
+
+<h1 id="balance">৳0.00</h1>
+
+<button id="withdrawBtn">
+Withdraw
+</button>
+
+</section>
+
+<section class="reward-box">
+
+<div class="box">
+
+<h4>Referral Bonus</h4>
+
+<p>Invite Friends</p>
+
+<span>+৳30</span>
+
 </div>
 
-<div class="card">
-<h2>Referral</h2>
-<p>Your Referral Link:</p>
+<div class="box">
 
-<input id="ref" readonly value="https://t.me/EasyCash2026_bot?start=12345">
+<h4>New User</h4>
 
-<button onclick="copy()">Copy Link</button>
+<p>Signup Reward</p>
 
-</div>
-
-<div class="card">
-
-<h2>Withdraw</h2>
-
-<input placeholder="Bkash Number">
-
-<input placeholder="Amount">
-
-<button onclick="withdraw()">Withdraw</button>
+<span>+৳20</span>
 
 </div>
 
-<script>
+</section>
 
-let money=0;
+<h3 class="title">
+Today's Tasks
+</h3>
 
-function task(){
+<section class="task-list">
 
-money+=10;
+<div class="task">
 
-document.getElementById("balance").innerHTML=money+" BDT";
+<img src="facebook.png">
 
-alert("Task Completed +10 BDT");
+<div>
 
-}
+<h4>Facebook Follow</h4>
 
-function copy(){
+<p>Reward: ৳25</p>
 
-let copyText=document.getElementById("ref");
+</div>
 
-copyText.select();
+<button class="task-btn">
+Start
+</button>
 
-document.execCommand("copy");
+</div>
 
-alert("Referral Link Copied");
+<div class="task">
 
-}
+<img src="youtube.png">
 
-function withdraw(){
+<div>
 
-if(money<100){
+<h4>YouTube Subscribe</h4>
 
-alert("Minimum Withdraw 100 BDT");
+<p>Reward: ৳25</p>
 
-}else{
+</div>
 
-alert("Withdraw Request Sent");
+<button class="task-btn">
+Start
+</button>
 
-}
-
-}
-
-</script>
-
-</body>
-
-</html>
+</div>
