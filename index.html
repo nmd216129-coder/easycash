@@ -1,105 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EasyCash</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyCash</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="app">
 
-<header class="header">
-<div class="logo">
-<h2>💸 EasyCash</h2>
-</div>
+  <header class="topbar">
+    <span class="menu">☰</span>
+    <h2>Easy<span>Cash</span></h2>
+    <span>🔔</span>
+  </header>
 
-<div class="profile">
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="avatar">
-</div>
-</header>
+  <div class="balance-card">
+    <div>
+      <p>মেইন ব্যালেন্স</p>
+      <h1>100.00 টাকা</h1>
+    </div>
+    <div class="wallet">💳</div>
+  </div>
 
-<section class="balance-card">
+  <div class="stats">
 
-<h3>Available Balance</h3>
+    <div class="card">
+      <h4>আজকের এন্ট্রি</h4>
+      <h2>0/10</h2>
+    </div>
 
-<h1 id="balance">৳0.00</h1>
+    <div class="card">
+      <h4>মোট রেফারেল</h4>
+      <h2>0</h2>
+    </div>
 
-<button id="withdrawBtn">
-Withdraw
-</button>
+    <div class="card">
+      <h4>মোট এন্ট্রি</h4>
+      <h2>0</h2>
+    </div>
 
-</section>
+    <div class="card">
+      <h4>মোট ইনকাম</h4>
+      <h2>100 টাকা</h2>
+    </div>
 
-<section class="reward-box">
+  </div>
 
-<div class="box">
+  <h3 class="title">দ্রুত একশন</h3>
 
-<h4>Referral Bonus</h4>
+  <div class="actions">
 
-<p>Invite Friends</p>
+    <div class="action">
+      📝
+      <p>টাস্ক করুন</p>
+    </div>
 
-<span>+৳30</span>
+    <div class="action">
+      💵
+      <p>উইথড্র করুন</p>
+    </div>
 
-</div>
+  </div>
 
-<div class="box">
+  <div class="bottom-nav">
 
-<h4>New User</h4>
+    <div class="active">
+      🏠
+      <span>হোম</span>
+    </div>
 
-<p>Signup Reward</p>
+    <div>
+      📋
+      <span>টাস্ক</span>
+    </div>
 
-<span>+৳20</span>
+    <div>
+      👥
+      <span>রেফার</span>
+    </div>
 
-</div>
+    <div>
+      👤
+      <span>প্রোফাইল</span>
+    </div>
 
-</section>
-
-<h3 class="title">
-Today's Tasks
-</h3>
-
-<section class="task-list">
-
-<div class="task">
-
-<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-
-<div>
-
-<h4>Facebook Follow</h4>
-
-<p>Reward: ৳25</p>
-
-</div>
-
-<button class="task-btn">
-Start
-</button>
-
-</div>
-
-<div class="task">
-
-<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
-
-<div>
-
-<h4>YouTube Subscribe</h4>
-
-<p>Reward: ৳25</p>
-
-<button id="youtubeTask" class="task-btn">
-Start
-</button>
-
-<button id="facebookTask" class="task-btn">
-Start
-</button>
+  </div>
 
 </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
