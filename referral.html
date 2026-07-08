@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EasyCash - Referral</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f3f4f6;
+}
+
+header{
+background:#16a34a;
+color:#fff;
+padding:18px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+}
+
+.container{
+padding:20px;
+}
+
+.card{
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+margin-bottom:20px;
+}
+
+.link{
+background:#eef2f7;
+padding:12px;
+border-radius:10px;
+word-break:break-all;
+margin:15px 0;
+}
+
+button{
+width:100%;
+padding:14px;
+background:#16a34a;
+color:#fff;
+border:none;
+border-radius:10px;
+font-size:17px;
+cursor:pointer;
+}
+
+.stats{
+display:flex;
+justify-content:space-between;
+margin-top:15px;
+}
+
+.box{
+background:#eef2f7;
+padding:15px;
+border-radius:10px;
+width:48%;
+text-align:center;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>👥 Referral</header>
+
+<div class="container">
+
+<div class="card">
+
+<h3>Your Referral Link</h3>
+
+<div class="link" id="refLink">
+https://t.me/EasyCash2026_bot
+</div>
+
+<button onclick="copyLink()">Copy Referral Link</button>
+
+<div class="stats">
+
+<div class="box">
+<h2>0</h2>
+<p>Friends</p>
+</div>
+
+<div class="box">
+<h2>0 Tk</h2>
+<p>Earned</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+function copyLink(){
+const text=document.getElementById("refLink").innerText;
+navigator.clipboard.writeText(text);
+alert("Referral link copied.");
+}
+</script>
+
+</body>
+</html>
