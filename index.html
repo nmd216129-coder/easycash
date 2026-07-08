@@ -1,105 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EasyCash</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EasyCash</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
 </head>
+
 <body>
 
 <div class="app">
 
-  <header class="topbar">
-    <span class="menu">☰</span>
-    <h2>Easy<span>Cash</span></h2>
-    <span>🔔</span>
-  </header>
+<header class="top-header">
 
-  <div class="balance-card">
-    <div>
-      <p>মেইন ব্যালেন্স</p>
-      <h1>100.00 টাকা</h1>
-    </div>
-    <div class="wallet">💳</div>
-  </div>
-
-  <div class="stats">
-
-    <div class="card">
-      <h4>আজকের এন্ট্রি</h4>
-      <h2>0/10</h2>
-    </div>
-
-    <div class="card">
-      <h4>মোট রেফারেল</h4>
-      <h2>0</h2>
-    </div>
-
-    <div class="card">
-      <h4>মোট এন্ট্রি</h4>
-      <h2>0</h2>
-    </div>
-
-    <div class="card">
-      <h4>মোট ইনকাম</h4>
-      <h2>100 টাকা</h2>
-    </div>
-
-  </div>
-
-  <h3 class="title">দ্রুত একশন</h3>
-
-  <div class="actions">
-
-    <div class="action">
-      📝
-      <p>টাস্ক করুন</p>
-    </div>
-
-    <div class="action">
-      💵
-      <p>উইথড্র করুন</p>
-    </div>
-
-  </div>
-
-  <div class="bottom-nav">
-
-    <div class="active">
-      🏠
-      <span>হোম</span>
-    </div>
-
-    <div>
-      📋
-      <span>টাস্ক</span>
-    </div>
-
-    <div>
-      👥
-      <span>রেফার</span>
-    </div>
-
-    <div>
-      👤
-      <span>প্রোফাইল</span>
-    </div>
-
-  </div>
-
+<div class="logo">
+💸 EasyCash
 </div>
 
-<script src="script.js"></script>
+<div class="profile">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+</div>
 
-</body>
-</html>
-<link rel="stylesheet" href="style.css">
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-</head>
+</header>
+
+<section class="balance-card">
+
+<p>Main Balance</p>
+
+<h1 id="balance">
+৳100.00
+</h1>
+
+<button>
+Withdraw
+</button>
+
+</section>
+
+<section class="grid">
+
+<div class="box">
+<h3>Today's Task</h3>
+<span>0 / 10</span>
+</div>
+
+<div class="box">
+<h3>Referral</h3>
+<span>0</span>
+</div>
+
+<div class="box">
+<h3>Total Income</h3>
+<span>৳100</span>
+</div>
+
+<div class="box">
+<h3>Withdraw</h3>
+<span>৳0</span>
+</div>
+
+</section>
+
+<h2 class="title">
+Quick Actions
+</h2>
+
+<section class="actions">
+
+<a href="task.html" class="action">
+📋
+<p>Tasks</p>
+</a>
+
+<a href="withdraw.html" class="action">
+💸
+<p>Withdraw</p>
+</a>
+
+<a href="referral.html" class="action">
+👥
+<p>Referral</p>
+</a>
+
+<a href="profile.html" class="action">
+👤
+<p>Profile</p>
+</a>
+
+</section>
