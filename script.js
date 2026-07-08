@@ -24,5 +24,5 @@ actions.forEach(action => {
 const balance = document.getElementById("balance");
 
 if (balance) {
-    balance.innerText = "৳100.00";
+    balance.innerText = "৳50.00";
 }
