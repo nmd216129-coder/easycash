@@ -1,19 +1,28 @@
-const tg = window.Telegram.WebApp;
+const tg = window.Telegram?.WebApp;
 
 if (tg) {
     tg.ready();
     tg.expand();
 }
-document.addEventListener("DOMContentLoaded", () => {
 
-  const actions = document.querySelectorAll(".action");
+const withdrawBtn = document.querySelector(".balance-card button");
 
-  actions[0].addEventListener("click", () => {
-    alert("Task Page শীঘ্রই যোগ করা হবে");
-  });
+if (withdrawBtn) {
+    withdrawBtn.addEventListener("click", () => {
+        window.location.href = "withdraw.html";
+    });
+}
 
-  actions[1].addEventListener("click", () => {
-    alert("Withdraw Page শীঘ্রই যোগ করা হবে");
-  });
+const actions = document.querySelectorAll(".action");
 
+actions.forEach(action => {
+    action.addEventListener("click", () => {
+        // a ট্যাগ হওয়ায় href নিজে থেকেই কাজ করবে
+    });
 });
+
+const balance = document.getElementById("balance");
+
+if (balance) {
+    balance.innerText = "৳100.00";
+}
