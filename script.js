@@ -26,3 +26,10 @@ const balance = document.getElementById("balance");
 if (balance) {
     balance.innerText = "৳50.00";
 }
+function openFacebook() {
+    window.open("https://www.facebook.com/share/1ERvH8URum/", "_blank");
+}
+
+function openYouTube() {
+    window.open("https://www.youtube.com/@EasyCash-y2c", "_blank");
+}
