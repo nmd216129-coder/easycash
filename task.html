@@ -43,6 +43,7 @@ border-radius:10px;
 color:white;
 font-size:16px;
 cursor:pointer;
+margin-top:10px;
 }
 
 button:hover{
@@ -59,30 +60,40 @@ background:#15803d;
 <div class="container">
 
 <div class="card">
-<h3>Join Telegram Channel</h3>
-<p>Reward: 5 Coins</p>
-<button>Start Task</button>
+<h3>📘 Facebook Follow</h3>
+<p>Reward: ৳25</p>
+<button onclick="openFacebook()">Start Task</button>
 </div>
 
 <div class="card">
-<h3>Watch Video</h3>
-<p>Reward: 10 Coins</p>
-<button>Start Task</button>
+<h3>▶️ YouTube Subscribe</h3>
+<p>Reward: ৳25</p>
+<button onclick="openYouTube()">Start Task</button>
 </div>
 
 <div class="card">
-<h3>Invite One Friend</h3>
-<p>Reward: 20 Coins</p>
-<button>Start Task</button>
+<h3>👥 Invite One Friend</h3>
+<p>Reward: ৳20</p>
+<button onclick="alert('Referral system will be added soon!')">Start Task</button>
 </div>
 
 </div>
+
+<script>
+const tg = window.Telegram?.WebApp;
+if(tg){
+    tg.ready();
+    tg.expand();
+}
+
+function openFacebook(){
+    window.open("https://www.facebook.com/share/1ERvH8URum/","_blank");
+}
+
+function openYouTube(){
+    window.open("https://www.youtube.com/@EasyCash-y2c","_blank");
+}
+</script>
 
 </body>
 </html>
-<button onclick="openFacebook()">Facebook Task</button>
-
-<button onclick="openYouTube()">YouTube Task</button>
-<button onclick="openFacebook()">Facebook Task</button>
-
-<button onclick="openYouTube()">YouTube Task</button>
