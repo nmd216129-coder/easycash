@@ -13,19 +13,6 @@ if (withdrawBtn) {
     });
 }
 
-const actions = document.querySelectorAll(".action");
-
-actions.forEach(action => {
-    action.addEventListener("click", () => {
-        // a ট্যাগ হওয়ায় href নিজে থেকেই কাজ করবে
-    });
-});
-
-const balance = document.getElementById("balance");
-
-if (balance) {
-    balance.innerText = "৳50.00";
-}
 function openFacebook() {
     window.open("https://www.facebook.com/share/1ERvH8URum/", "_blank");
 }
