@@ -4,8 +4,11 @@ import {
   getFirestore,
   doc,
   getDoc,
-  setDoc
+  setDoc,
+  updateDoc,
+  increment
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyA1ZhfhVDUSuMJBso1HOSdrgyVecneEW7Y",
@@ -34,6 +37,7 @@ if (tg) {
   }
 }
 
+
 async function createUser(user) {
 
   const userRef = doc(db, "users", String(user.id));
@@ -42,14 +46,35 @@ async function createUser(user) {
 
   if (!snap.exists()) {
 
+    const refCode = "EC" + user.id;
+
+    let referredBy = "";
+
+    if (tg.initDataUnsafe?.start_param) {
+      referredBy = tg.initDataUnsafe.start_param;
+    }
+
     await setDoc(userRef, {
       id: user.id,
       name: user.first_name,
       username: user.username || "",
-      balance: 50,
+      balance: referredBy ? 20 : 50,
       referral: 0,
+      refCode: refCode,
+      referredBy: referredBy,
       joined: new Date().toISOString()
     });
+
+    if (referredBy) {
+
+      const refUserRef = doc(db, "users", referredBy.replace("EC", ""));
+
+      await updateDoc(refUserRef, {
+        balance: increment(30),
+        referral: increment(1)
+      });
+
+    }
 
   }
 
