@@ -79,3 +79,4 @@ async function createUser(user) {
   }
 
 }
+export { db };
