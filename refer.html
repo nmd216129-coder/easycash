@@ -130,8 +130,7 @@ async function loadReferral() {
     const data = snap.data();
 
     document.getElementById("refLink").innerText =
-      "https://t.me/EasyCash2026_bot?start=" + data.refCode;
-
+  "https://t.me/EasyCash2026_bot?startapp=" + data.refCode;
     document.querySelectorAll(".box h2")[0].innerText = data.referral;
     document.querySelectorAll(".box h2")[1].innerText =
       (data.referral * 30) + " Tk";
