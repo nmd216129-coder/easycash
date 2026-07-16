@@ -48,11 +48,8 @@ async function createUser(user) {
 
     const refCode = "EC" + user.id;
 
-    let referredBy = "";
-
-    if (tg.initDataUnsafe?.start_param) {
-      referredBy = tg.initDataUnsafe.start_param;
-    }
+    console.log("Telegram Data:", tg.initDataUnsafe);
+console.log("Start Param:", tg.initDataUnsafe?.start_param);
 
     await setDoc(userRef, {
       id: user.id,
