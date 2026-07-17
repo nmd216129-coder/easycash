@@ -31,6 +31,9 @@ if (tg) {
   tg.ready();
   tg.expand();
 
+  // 👇 এই লাইনটি নতুন যোগ করুন
+  alert(JSON.stringify(tg.initDataUnsafe));
+
   const user = tg.initDataUnsafe?.user;
 
   if (user) {
