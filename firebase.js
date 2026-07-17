@@ -48,8 +48,8 @@ async function createUser(user) {
   // User's own referral code
   const refCode = "EC" + user.id;
 
-  // Read referral code from Telegram
-  let referredBy = tg.initDataUnsafe?.start_param || "";
+  const startParam = tg.initDataUnsafe?.start_param;
+let referredBy = startParam ? startParam.trim() : "";
 
   // Create new user
   await setDoc(userRef, {
@@ -64,8 +64,11 @@ async function createUser(user) {
   });
 
   // Give bonus to referrer
-  if (referredBy && referredBy !== refCode) {
-
+ if (
+  referredBy &&
+  referredBy.startsWith("EC") &&
+  referredBy !== refCode
+) {
     const referrerId = referredBy.replace("EC", "");
     const refUserRef = doc(db, "users", referrerId);
 
