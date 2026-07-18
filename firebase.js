@@ -30,7 +30,9 @@ const tg = window.Telegram?.WebApp;
 if (tg) {
   tg.ready();
   tg.expand();
-
+  // 👇 এই দুই লাইন যোগ করুন
+  alert("Start Param: " + tg.initDataUnsafe?.start_param);
+  console.log(tg.initDataUnsa
   // 👇 এই লাইনটি নতুন যোগ করুন
   alert(JSON.stringify(tg.initDataUnsafe));
 
