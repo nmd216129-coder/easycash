@@ -117,7 +117,8 @@ const tg = window.Telegram?.WebApp;
 tg?.ready();
 
 const user = tg?.initDataUnsafe?.user;
-
+alert(user?.id);
+console.log(user);
 async function loadReferral() {
 
   if (!user) return;
