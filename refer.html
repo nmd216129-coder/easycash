@@ -128,7 +128,8 @@ async function loadReferral() {
   if (snap.exists()) {
 
     const data = snap.data();
-
+    alert(JSON.stringify(data));
+alert(data.refCode);
     document.getElementById("refLink").innerText =
   "https://t.me/EasyCash2026_bot?startapp=" + data.refCode;
     document.querySelectorAll(".box h2")[0].innerText = data.referral;
