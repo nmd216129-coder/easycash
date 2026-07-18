@@ -31,8 +31,7 @@ if (tg) {
   tg.ready();
   tg.expand();
   // 👇 এই দুই লাইন যোগ করুন
-  alert("Start Param: " + tg.initDataUnsafe?.start_param);
-  console.log(tg.initDataUnsafe);
+  alert("Start Param: " + (tg.initDataUnsafe?.start_param || "NULL"));
   // 👇 এই লাইনটি নতুন যোগ করুন
   alert(JSON.stringify(tg.initDataUnsafe))
 
