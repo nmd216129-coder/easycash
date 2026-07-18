@@ -34,7 +34,7 @@ if (tg) {
   alert("Start Param: " + tg.initDataUnsafe?.start_param);
   console.log(tg.initDataUnsa
   // 👇 এই লাইনটি নতুন যোগ করুন
-  alert(JSON.stringify(tg.initDataUnsafe));
+  alert(JSON.stringify(tg.initDataUnsafe))
 
   const user = tg.initDataUnsafe?.user;
 
