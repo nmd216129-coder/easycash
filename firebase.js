@@ -32,7 +32,7 @@ if (tg) {
   tg.expand();
   // 👇 এই দুই লাইন যোগ করুন
   alert("Start Param: " + tg.initDataUnsafe?.start_param);
-  console.log(tg.initDataUnsa
+  console.log(tg.initDataUnsafe);
   // 👇 এই লাইনটি নতুন যোগ করুন
   alert(JSON.stringify(tg.initDataUnsafe))
 
