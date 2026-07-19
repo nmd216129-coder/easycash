@@ -50,12 +50,19 @@ async function createUser(user) {
   if (snap.exists()) {
   const data = snap.data();
 
-  if (!data.refCode || !data.referredBy) {
-  await updateDoc(userRef, {
-    refCode: data.refCode || ("EC" + user.id),
-    referredBy: data.referredBy || ""
-  });
-}
+  const updateData = {};
+
+  if (!data.refCode) {
+    updateData.refCode = "EC" + user.id;
+  }
+
+  if (data.referredBy === undefined) {
+    updateData.referredBy = "";
+  }
+
+  if (Object.keys(updateData).length > 0) {
+    await updateDoc(userRef, updateData);
+  }
 
   return;
 }
