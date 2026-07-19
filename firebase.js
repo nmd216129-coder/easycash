@@ -47,7 +47,17 @@ async function createUser(user) {
   const snap = await getDoc(userRef);
 
   // User already exists
-  if (snap.exists()) return;
+  if (snap.exists()) {
+  const data = snap.data();
+
+  if (!data.refCode) {
+    await updateDoc(userRef, {
+      refCode: "EC" + user.id
+    });
+  }
+
+  return;
+}
 
   // User's own referral code
   const refCode = "EC" + user.id;
